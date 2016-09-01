@@ -8,7 +8,7 @@ Added asterisk modules:
 # Usage
 
 ```
-git clone https://github.com/markuslindenberg/docker-asterisk-debbuilder.git
+git clone https://github.com/sardigital/docker-asterisk-debbuilder.git
 cd docker-asterisk-debbuilder
 docker build -t astbuild .
 docker run astbuild

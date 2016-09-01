@@ -3,8 +3,16 @@
 This is a *Dockerfile* and shell script to create a Docker image that will, when run, build **unofficial** Debian Jessie packages of the current Asterisk 13 tarball including PJSIP 2.5.5.
 
 Found and corrected bug: Unknown value '' found in build_tools/menuselect-deps for NATIVE_ARCH
-Added asterisk modules:
 
+Added asterisk modules:
+```
+app_cdr
+cdr_odbc
+func_odbc
+res_odbc
+generic_odbc
+ltdl
+```
 # Usage
 
 ```

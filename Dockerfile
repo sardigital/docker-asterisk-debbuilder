@@ -11,8 +11,9 @@ RUN apt-get -y install build-essential pkg-config sudo curl ruby ruby-dev binuti
 	libsrtp0-dev libssl-dev libspeex-dev libspeexdsp-dev \
 	libgsm1-dev \
 	subversion flex libxml2-dev libxslt1-dev libncurses5-dev libcurl4-openssl-dev libsqlite3-dev uuid-dev libjansson-dev \
+	libboost-iostreams1.55.0 libclass-accessor-perl libcwidget3 libio-string-perl libparse-debianchangelog-perl libsigc++-2.0-0c2a libsub-name-perl \
+	libxapian22 unixodbc unixodbc-dev \
 	&& apt-get clean
-
 # Install FPM (Effing Package Management)
 RUN gem install fpm
 

@@ -2,7 +2,7 @@
 
 set -x -e
 
-pjsip_url="http://www.pjsip.org/release/2.3/pjproject-2.3.tar.bz2"
+pjsip_url="http://www.pjsip.org/release/2.3/pjproject-2.5.5.tar.bz2"
 asterisk_url="http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz"
 
 mountdir="/output"
@@ -91,9 +91,12 @@ astversion="$(echo ${astdir} | awk -F '-' '{print $2;}')"
 
 cd ${builddir}/${astdir}
 sudo -u build ./configure CFLAGS=-mtune=generic --host=x86_64-linux-gnu --build=x86_64-linux-gnu
+sudo -u build contrib/scripts/get_mp3_source.sh
+sudo -u build sed -i '/NATIVE_ARCH=/c \NATIVE_ARCH=0' build_tools/menuselect-deps
 sudo -u build make menuselect.makeopts
 sudo -u build menuselect/menuselect --enable DONT_OPTIMIZE menuselect.makeopts
 sudo -u build menuselect/menuselect --enable BETTER_BACKTRACES menuselect.makeopts
+sudo -u build menuselect/menuselect --enable app_cdr --enable cdr_odbc --enable func_odbc --enable res_odbc --enable generic_odbc --enable ltdl --enable ODBC_STORAGE menuselect.makeopts
 sudo -u build make
 
 # Create Packages

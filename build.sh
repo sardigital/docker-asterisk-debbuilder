@@ -2,7 +2,7 @@
 
 set -x -e
 
-pjsip_url="http://www.pjsip.org/release/2.5.5/pjproject-2.5.5.tar.bz2"
+pjsip_url="http://pjsip.org/release/2.6/pjproject-2.6.tar.bz2"
 asterisk_url="http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz"
 
 mountdir="/output"

@@ -96,7 +96,7 @@ sudo -u build sed -i '/NATIVE_ARCH=/c \NATIVE_ARCH=0' build_tools/menuselect-dep
 sudo -u build make menuselect.makeopts
 sudo -u build menuselect/menuselect --enable DONT_OPTIMIZE menuselect.makeopts
 sudo -u build menuselect/menuselect --enable BETTER_BACKTRACES menuselect.makeopts
-sudo -u build menuselect/menuselect --enable app_cdr --enable cdr_odbc --enable func_odbc --enable res_odbc --enable generic_odbc --enable ltdl --enable ODBC_STORAGE menuselect.makeopts
+sudo -u build menuselect/menuselect --enable app_cdr --enable cdr_odbc --enable func_odbc --enable res_odbc --enable ODBC_STORAGE menuselect.makeopts
 sudo -u build make
 
 # Create Packages

@@ -97,6 +97,7 @@ sudo -u build make menuselect.makeopts
 sudo -u build menuselect/menuselect --enable DONT_OPTIMIZE menuselect.makeopts
 sudo -u build menuselect/menuselect --enable BETTER_BACKTRACES menuselect.makeopts
 sudo -u build menuselect/menuselect --enable app_cdr --enable cdr_odbc --enable func_odbc --enable res_odbc --enable ODBC_STORAGE menuselect.makeopts
+sudo -u build menuselect/menuselect --disable MOH-OPSOUND-WAV --enable chan_motif --enable chan_mgcp --enable hep_pjsip --enable res_snmp menuselect.makeopts
 sudo -u build make
 
 # Create Packages
